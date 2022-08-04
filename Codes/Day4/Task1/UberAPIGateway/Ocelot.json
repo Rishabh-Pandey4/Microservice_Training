@@ -1,0 +1,52 @@
+{
+  "ReRoutes": [
+    {
+      "DownStreamPathTemplate": "/api/Driver",
+      "DownStreamSchema": "https",
+      "DownStreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 44382
+        }
+      ],
+      "UpStreamPathTemplate": "/apigateway/DriverService",
+      "UpStreamHttpMethod": [ "Get","Post"]
+    },
+    {
+      "DownStreamPathTemplate": "/api/Driver/{id}",
+      "DownStreamSchema": "https",
+      "DownStreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 44382
+        }
+      ],
+      "UpStreamPathTemplate": "/apigateway/DriverService/{id}",
+      "UpStreamHttpMethod": [ "Put", "Delete","Get" ]
+    },
+    {
+      "DownStreamPathTemplate": "/api/Passenger",
+      "DownStreamSchema": "https",
+      "DownStreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 44316
+        }
+      ],
+      "UpStreamPathTemplate": "/apigateway/PassengerService",
+      "UpStreamHttpMethod": [ "Get", "Post" ]
+    },
+    {
+      "DownStreamPathTemplate": "/api/Passenger/{id}",
+      "DownStreamSchema": "https",
+      "DownStreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 44316
+        }
+      ],
+      "UpStreamPathTemplate": "/apigateway/PassengerService/{id}",
+      "UpStreamHttpMethod": [ "Put", "Delete", "Get" ]
+    }
+  ]
+}
